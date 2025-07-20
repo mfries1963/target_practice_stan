@@ -1,0 +1,38 @@
+---
+title: "Git notes"
+format: html
+editor: visual
+---
+
+## Keys and codes
+
+Cloning:
+
+For git hub mfries1963:
+
+git clone git\@github-mfries1963:mfries1963/myrepo.git
+
+For git hub mfries1963allan
+
+git clone git\@github-mfries1963allan:mfries1963allan/myrepo.git
+
+SSH key keyword: yichen
+
+
+From R-studio Posit, drop the slashes
+
+For git hub mfries1963:
+
+git clone git@github-mfries1963:mfries1963/myrepo.git
+
+For git hub mfries1963allan
+
+git clone git@github-mfries1963allan:mfries1963allan/myrepo.git
+
+SSH key keyword: yichen
+
+# change myrepo2 to new project name.  Here project folder and git repo are the same folder.
+usethis::create_from_github(
+  "github-mfries1963:mfries1963/myrepo.git",
+  destdir = "~/R_projects/myrepo2/"
+)
