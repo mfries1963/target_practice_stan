@@ -1,5 +1,5 @@
 library(targets)
-library()
+library(quarto)
 library(tidyverse)
 
 tar_visnetwork()

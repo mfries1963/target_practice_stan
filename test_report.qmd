@@ -1,0 +1,44 @@
+---
+title: "test_report"
+format: html
+editor: visual
+---
+
+```{r label = "setup"}
+library(gt)
+library(tarchetypes)
+library(targets)
+library(tidyverse)
+
+```
+
+
+## Testing tar_quarto
+
+This document is a toy example for tar_quarto.
+
+## Assumptions
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r, label="assumptions"}
+
+# values = tar_load(values)
+values = list(beta = c(0,1))
+values |>
+  as_tibble() |>
+  gt(caption = "Study Assumptions") # I may need a full set of assumptions in a tibble as a target
+  # tab_header(title = "Study Assumptions") 
+```
+
+## Table
+
+```{r}
+#| echo: false
+
+values = tar_read(model)
+values |>
+  gt(caption = "Fitted Model Data") 
+```
+
+## Figure
